@@ -2,12 +2,12 @@
 
 {{ with .Params.hero }}
 <section class="relative min-h-screen w-full overflow-hidden">
-  <!-- Background Image with Overlay -->
-  <div class="absolute inset-0 z-0">
+  <!-- Background image -->
+  <div class="absolute inset-0 z-0 mt-6">
     {{ if .image }}
     {{ partial "image" (dict 
         "Src" .image 
-        "Alt" "Hero background"
+        "Alt" .headline
         "Class" "h-full w-full object-cover"
         "DisplayXL" "1920x1080"
         "DisplayLG" "1280x720"
@@ -17,16 +17,16 @@
     {{ end }}
   </div>
 
-  <!-- Header with Logo -->
-  <header class="relative z-20 w-full">
+  <!-- Logo -->
+  <header class="relative z-20 w-full mb-12 md:mb-8">
     <div class="container py-6">
       <a href="{{ site.Home.RelPermalink }}" class="inline-block">
-        {{ partial "logo" }}
+        <div class="w-3/4 h-3/4 md:w-full md:h-full">{{ partial "logo" }}</div>
       </a>
     </div>
   </header>
 
-  <!-- Content Container -->
+  <!-- Content -->
   <div class="container relative z-20 flex h-full items-center pb-20">
     <div class="max-w-4xl">
       {{ with .headline }}
@@ -52,10 +52,10 @@
     </div>
   </div>
 
-  <!-- Optional: Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 z-20 -translate-x-1/2">
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-16 left-1/2 z-20 -translate-x-1/2">
     <div class="animate-bounce">
-      <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="h-12 w-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
     </div>
