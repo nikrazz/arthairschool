@@ -1,13 +1,17 @@
 ---
-# Banner
-banner:
-  title: "The Ultimate Starter Template You Need To Start Your Hugo Project"
-  content: "Hugoplate is a free starter template built with Hugo and TailwindCSS, providing everything you need to jumpstart your Hugo project and save valuable time."
-  image: "/images/banner.png"
-  button:
-    enable: true
-    label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/hugoplate"
+title: "Арт Школа Парикмахерского Искусства в городе Ростов"
+description: "Обучающий курс «Окрашивание AirTouch» даст вам уверенную базу в одной из самых востребованных техник современной колористики. Вы разберетесь в принципах работы с воздухом, освоите ключевые приемы и научитесь создавать мягкие, натуральные переходы оттенков, которые выглядят premium и дорого."
+hero:
+  headline: "Арт Школа Парикмахерского Искусства"
+  desc: |
+    Арт Школа Парикмахерского Искусства приглашает тех, кто стремится освоить профессию и погрузиться в бьюти-индустрию.
+    
+    Здесь проходят авторские программы по женским стрижкам, современным техникам окрашивания, укладкам и созданию причесок для любой длины волос. Обучение ведут опытные преподаватели, знающие тренды и практику изнутри.
+  image: "/images/hero-02.png"
+  # button:
+  #   enable: true
+  #   label: "Get Started For Free"
+  #   link: "https://github.com/zeon-studio/hugoplate"
 
 # Features
 features:
