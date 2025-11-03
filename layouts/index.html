@@ -82,7 +82,7 @@
     </p>
     {{ end }}
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
       {{ range .items }}
       <div class="border border-fuchsia-600 rounded-lg p-6">
         <h3 class="text-xl mb-2 text-slate-100">{{ .heading }}</h3>
@@ -90,6 +90,10 @@
       </div>
       {{ end }}
     </div>
+
+    {{ with .cta }}
+    <p class="text-lg font-semibold text-center mb-8 text-slate-100">{{ .heading }}</p>
+    {{ end }}
 
   </div>
 </section>
