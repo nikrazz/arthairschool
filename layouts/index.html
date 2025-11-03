@@ -6,7 +6,8 @@
   <div class="absolute inset-0 z-0 mt-6">
     {{ if .image }}
     {{ partial "image" (dict 
-        "Src" .image 
+        "Src" .image
+        "Loading" "eager" 
         "Alt" .headline
         "Class" "h-full w-full object-cover"
         "DisplayXL" "1920x1080"
