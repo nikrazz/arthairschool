@@ -7,7 +7,8 @@
     {{ if .image }}
     {{ partial "image" (dict 
         "Src" .image
-        "Loading" "eager" 
+        "Loading" "eager"
+        "FetchPriority" "high" 
         "Alt" .headline
         "Class" "h-full w-full object-cover"
         "DisplayXL" "1920x1080"
