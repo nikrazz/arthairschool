@@ -43,7 +43,8 @@
 
       {{ with .button }}
       {{ if .enable }}
-      <a href="{{ .link | relLangURL }}"
+      <h3 class="mb-8">Вопросы? Ждём вашего звонка. Набирайте:</h3>
+      <a href="{{ .link | safeURL }}"
         class="inline-block rounded-lg bg-white px-8 py-4 text-lg font-semibold text-gray-900 transition-all duration-300 hover:bg-gray-100 hover:shadow-lg">
         {{ .label }}
       </a>
@@ -53,9 +54,9 @@
   </div>
 
   <!-- Scroll indicator -->
-  <div class="absolute bottom-16 left-1/2 z-20 -translate-x-1/2">
+  <div class="absolute bottom-8 left-1/2 z-20 -translate-x-1/2">
     <div class="animate-bounce">
-      <svg class="h-12 w-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
     </div>
