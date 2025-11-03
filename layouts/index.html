@@ -45,7 +45,7 @@
 
       {{ with .button }}
       {{ if .enable }}
-      <h3 class="mb-8 text-fuchsia-600">Вопросы? Ждём вашего звонка. Набирайте:</h3>
+      <h2 class="mb-8 text-fuchsia-600">Вопросы? Ждём вашего звонка. Набирайте:</h3>
       <a href="{{ .link | safeURL }}"
         class="inline-block rounded-lg bg-fuchsia-600 px-8 py-4 text-lg text-slate-100 transition-all duration-300 hover:bg-fuchsia-800">
         {{ .label }}
@@ -62,6 +62,35 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
     </div>
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.benefits }}
+<section class="py-20">
+  <div class="container max-w-5xl mx-auto">
+    
+    {{ with .title }}
+    <h2 class="text-center mb-4 text-fuchsia-600">
+      {{ . }}
+    </h2>
+    {{ end }}
+
+    {{ with .sub_title }}
+    <p class="text-center text-lg text-slate-200 mb-8 max-w-3xl mx-auto">
+      {{ . }}
+    </p>
+    {{ end }}
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+      {{ range .items }}
+      <div class="border border-fuchsia-600 rounded-lg p-6">
+        <h3 class="text-xl mb-2 text-slate-100">{{ .heading }}</h3>
+        <p class="text-slate-200 leading-relaxed">{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+
   </div>
 </section>
 {{ end }}
