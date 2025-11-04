@@ -1,0 +1,11 @@
+<script>
+  document.body.addEventListener('click', function (e) {
+    const showBtn = e.target.closest('.{{ .js_class }}');
+    if (showBtn) {
+      e.preventDefault();
+      document.getElementById('{{ .js_id }}')?.classList.remove('hidden');
+      document.getElementById('scroll-to-form')?.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+  });
+</script>

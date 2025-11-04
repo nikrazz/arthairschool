@@ -1,0 +1,46 @@
+<form action="/спасибо/" method="POST" id="contact" name="contact" netlify-honeypot="bot" netlify>
+  <p class="hidden">
+    <label>
+      For bots <input type="text" name="bot" />
+    </label>
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+    <div>
+      <label for="firstName" class="text-slate-200">Имя<span class="text-fuchsia-600"> *</span></label>
+      <input id="firstName" name="firstName" required
+      class="form-input bg-slate-900 text-slate-200 border border-slate-500 placeholder:text-slate-400 mt-2"
+      placeholder="Ваше имя" type="text" />
+    </div>
+    <div>
+      <label for="lastName" class="text-slate-200">Фамилия<span class="text-fuchsia-600"> *</span></label>
+      <input id="lastName" name="lastName" required
+      class="form-input bg-slate-900 text-slate-200 border border-slate-500 placeholder:text-slate-400 mt-2"
+      placeholder="Ваша фамилия" type="text" />
+    </div>
+    <div>
+      <label for="phone" class="text-slate-200">Телефон<span class="text-fuchsia-600"> *</span></label>
+      <input id="phone" name="phone" required
+      class="form-input bg-slate-900 text-slate-200 border border-slate-500 placeholder:text-slate-400 mt-2"
+      placeholder="Ваш номер телефона" type="text" />
+    </div>
+    <div>
+      <label for="email" class="text-slate-200">Почта<span class="text-fuchsia-600"> *</span></label>
+      <input id="email" name="email" required
+      class="form-input bg-slate-900 text-slate-200 border border-slate-500 placeholder:text-slate-400 mt-2"
+      placeholder="Ваша электронная почта" type="email" />
+    </div>
+    <div class="col-span-1 md:col-span-2">
+      <label for="message" class="text-slate-200">Любые другие детали которые вас интересуют:</label>
+      <textarea name="message" id="message" rows="4" class="w-full form-input bg-slate-900 text-slate-200 border border-slate-500 mt-2"></textarea>
+    </div>
+  </div>  
+  {{ with .Disclaimer }}
+  <div class="p-8 text-center text-slate-300">    
+    <p class="text-slate-300">{{ .Content | safeHTML }}</p>    
+  </div>
+  {{ end }}
+  
+  <div class="md:col-span-2 text-center">
+    <button type="submit" class="bg-fuchsia-600 text-slate-200 rounded font-semibold text-lg px-4 py-2 w-full md:w-1/3">Посылаем</button>
+  </div>
+</form>

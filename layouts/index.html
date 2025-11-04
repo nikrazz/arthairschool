@@ -95,10 +95,27 @@
     <p class="text-lg font-semibold text-center mb-8 text-slate-100">{{ .heading }}</p>
     <h2 class="text-center mb-4 text-fuchsia-600">{{ .form_title }}</h2>
     <p class="text-lg font-semibold text-center mb-8 text-slate-100 max-w-3xl mx-auto">{{ .desc }}</p>
+    
+    {{ with .form }}
+    <div class="text-center mb-4">      
+      <a href="#" id="{{ .cta_id }}"
+        class="{{ .js_class }} inline-block text-slate-100 text-lg bg-fuchsia-600 font-semibold rounded px-6 py-2 mb-4">
+        {{ .btn_text }}
+      </a>
+    </div>
+    <div id="{{ .js_id }}" class="max-w-3xl mx-auto hidden">
+      <p id="scroll-to-form" class="text-center mb-4 text-lg">{{ .follow_up }} 😊</p>
+      {{ partial "contact-form" . }}
+    </div>
     {{ end }}
-
+    
+    {{ end }}
   </div>
 </section>
+{{ end }}
+
+{{ with .Params.benefits.cta.form }}
+{{ partial "show-hidden.html" . }}
 {{ end }}
 
 {{ end }}
