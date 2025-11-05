@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<section class="section-sm bg-black">
+  
+  <header class="w-full mb-16">
+    <div class="container py-6 flex justify-center">
+      <a href="{{ site.Home.RelPermalink }}" class="inline-flex">
+        <div class="w-[180px] mx-auto">
+          {{ partial "logo" }}
+        </div>
+      </a>
+    </div>
+  </header>
+  
+  {{ with .Params.content }}
+  <div class="container max-w-3xl mx-auto text-center">
+
+    {{ with .title }}
+    <h1 class="text-slate-100 text-4xl mb-4">
+      {{ . }}
+    </h1>
+    {{ end }}
+
+    {{ with .sub_title }}
+    <p class="text-slate-200 text-xl mb-8">
+      {{ . }}
+    </p>
+    {{ end }}
+
+    <a id="{{ .cta_id }}" href="{{ site.Home.RelPermalink }}"
+      class="inline-block rounded-lg bg-fuchsia-600 px-8 py-4 text-lg text-slate-100 transition-all duration-300 hover:bg-fuchsia-800">
+      {{ .button_text }}
+    </a>
+
+  </div>
+  {{ end }}
+
+</section>
+
+
+{{ end }}
